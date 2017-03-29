@@ -39,3 +39,25 @@ function onClickList(evt)
      localStorage.setItem('codigo',code);
     
 }
+/*
+<input type="radio" name="languages" id="spanish">
+<label for="spanish">Español</label>
+<input type="radio" name="languages" id="english">
+<label for="english">Inglés</label>
+<input type="radio" name="languages" id="italian">
+<label for="italian">Italiano</label>
+Al igual que con los checks todos los radios deben tener el mismo nombre y poseer ID's diferentes por lo cual no podemos validar usando ese atributo sino el atributo name.
+
+El código necesario para validar los radiobuttons es el siguiente:
+
+$('#validate').click(function() {
+
+    //Se verifica si alguno de los radios esta seleccionado
+    if ($('input[name="languages"]').is(':checked')) {
+        alert('Campo correcto');
+    } else {
+        alert('Se debe seleccionar un idioma');
+    }
+});
+
+*/
