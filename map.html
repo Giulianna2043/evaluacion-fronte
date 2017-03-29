@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="iconos/style.css">
+    
+	
+	<title>Examen Herramientas Productividad</title>
+	<!--REQUIRED STYLE SHEETS-->
+</head>
+<body>
+    <!-- ------------------------------------------------------------------ MAPA -->
+    
+    <div id="map"></div>
+    <!-- ---------------------------------------------------------- SEGUNDA VISTA -->
+    <div class="navbar navbar-default navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header page-scroll col-xs-10">
+                <a class="navbar-brand page-scroll" href="#page-top"><img class="img-responsive" id="logo" height="1px" src="src/img/logo-gris.jpg" alt=""></a>
+            </div>
+            <div id="imagen">
+                <i class="icon-info" aria-hidden="true"></i>   
+            </div>
+
+        </div>
+      
+    </div><!--END NAV SECTION -->
+    <form action="">
+         <div id="floating-panel">
+   
+    <h6 style="padding:0px;" >ORIGEN</h6>
+    <select id="start"type="submit" onchange="calcRoute();">
+        <option value="0">origen</option>
+      <option value="chicago, il,">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select><br>
+    <h6 style="padding:0px;" >DESTINO</h6>
+    <select id="end" type="submit" onchange="calcRoute();">
+        <option value="0">destino</option>
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+    </div>
+    <div id="boton">
+        <button class="btn btn-lg btn-primary btn-block submit-btn" type="submit"  >BUSCAR</button>
+    
+    </div>  
+    </form>
+
+    
+	<div id="home-sec"  style="width:30%;">
+	    <h3>VEHICULO</h3>
+		    <p>Seleccione</p>   
+		<div class="container "style="padding:0px;" >
+            <div class="row" style="padding:0px;">
+                <div class="col-xs-12" style="padding:0px;">
+                    <ul style="padding:0px;" id="lista" >
+                    <li style="padding:0px;">
+                        <a href="" >
+                        <div class="row">
+                                <div class="col-xs-5" style="padding:0px;">
+                                <div class="col-xs-2"style="padding:0px;">
+                                    <input type="radio" name="transporte" value="1">
+                                </div>
+                                <div class="col-xs-3"style="padding:0px;" >
+                                    <img class="imagencar"src="src/img/moto.jpg" alt="" height="30px" width="30px" value="12">    
+                                </div>
+                                <div class="col-xs-5"style="padding:0px;">
+                                    <p style="padding:0px;"id="frase"><b>Motocicleta</b> <br><small>maximo 2 pasajeros</small></p>
+                                </div>   
+                            </div>    
+                        </div>                            
+                        </a>
+
+
+                    </li>
+                    <li style="padding:0px;">
+                        <div class="row">
+                                <div class="col-xs-5" style="padding:0px;">
+                                <div class="col-xs-2"style="padding:0px;">
+                                    <input type="radio" name="transporte" value="1">
+                                </div>
+                                <div class="col-xs-3"style="padding:0px;" >
+                                    <img class="imagencar"src="src/img/auto.jpg" alt="" height="30px" width="30px">    
+                                </div>
+                                <div class="col-xs-5"style="padding:0px;">
+                                    <p id="frase"><b>Automovil</b> <br><small>maximo 2 pasajeros</small></p>
+                                </div>   
+                            </div>    
+                        </div>
+
+                    </li>
+                                        <li style="padding:0px;">
+                        <div class="row">
+                                <div class="col-xs-5" style="padding:0px;">
+                                <div class="col-xs-2"style="padding:0px;">
+                                    <input type="radio" name="transporte" value="1">
+                                </div>
+                                <div class="col-xs-3"style="padding:0px;" >
+                                    <img class="imagencar"src="src/img/van.jpg" alt="" height="30px" width="30px">    
+                                </div>
+                                <div class="col-xs-5"style="padding:0px;">
+                                    <p id="frase"><b>Minivan</b> <br><small>maximo 2 pasajeros</small></p>
+                                </div>   
+                            </div>    
+                        </div>
+
+                    </li>
+                    <li style="padding:0px;">
+                        <div class="row">
+                                <div class="col-xs-5" style="padding:0px;">
+                                <div class="col-xs-2"style="padding:0px;">
+                                    <input type="radio" name="transporte" value="1">
+                                </div>
+                                <div class="col-xs-3"style="padding:0px;" >
+                                    <img class="imagencar"src="src/img/camion.jpg" alt="" height="30px" width="30px">    
+                                </div>
+                                <div class="col-xs-5"style="padding:0px;">
+                                    <p id="frase"><b>Camion</b> <br><small>maximo 2 pasajeros</small></p>
+                                </div>   
+                            </div>    
+                        </div>
+
+                    </li>
+                </ul>   
+                    
+                    
+                    
+    
+       
+                </div>
+            </div>
+        </div>
+         <p style="padding:0px;"><b>Cantidad de pasajeros:</b><input type="" onKeyPress="return SoloNumeros(event)"></p>
+         
+        
+		</div>
+
+
+	<section id="calculator" >
+		<div class="container">
+            <button>Compartir carro</button> 
+		</div>
+	</section><!--END PROJECT SECTION-->
+	<div id="footer">
+		2014 www.yourdomain.com | All Right Reserved  
+	</div><!-- END FOOTER SECTION -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OTUCWFO21snB64uTCKgsDmi3UlP5FCo&callback=initMap" async defer></script>
+<script src="src/js/map.js"></script>
+<script src="src/js/main.js"></script>
+	
+</body>
+</html>
