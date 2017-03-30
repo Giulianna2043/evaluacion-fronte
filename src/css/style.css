@@ -32,42 +32,19 @@ html, body {
   padding-top: 5%;
   font-size: 35px; }
 
-#info {
-  height: 100px;
-  width: 100px;
-  background-color: rgba(31, 31, 31, 0.9);
-  -webkit-transition: opacity 0.2s;
-  opacity: 0; }
-
-.icon-info:hover #info {
-  opacity: 1; }
-
-#home-sec {
-  z-index: 5;
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #999;
-  text-align: center;
-  font-family: 'Roboto','sans-serif';
-  line-height: 30px;
-  padding-left: 10px;
+#boton-desplegable {
   position: absolute;
   top: 35%;
-  left: 5%; }
-  #home-sec li {
-    list-style: none; }
+  left: 0%; }
+  #boton-desplegable ul {
+    background: white;
+    padding-top: 1%; }
+  #boton-desplegable li {
+    list-style: none;
+    padding: 0; }
 
-#boton {
-  z-index: 5;
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #999;
-  text-align: center;
-  font-family: 'Roboto','sans-serif';
-  line-height: 30px;
-  padding-left: 10px;
+#calculator {
   position: absolute;
-  top: 28%;
-  left: 5%; }
+  top: 43%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -45,33 +45,28 @@ html, body {
     padding-top: 5%;
     font-size: 35px;
 }
-#info{
-    height: 100px;
-    width: 100px;
-    background-color: rgba(31,31,31,0.9);
-    -webkit-transition:opacity 0.2s;
-    opacity: 0;
-}
 
-.icon-info:hover #info{
-    opacity: 1;
-}
 
-#home-sec {
-    @include cuadroizquierda;
+#boton-desplegable{
+   // @include cuadroizquierda;
     position: absolute;
-    top: 35%;
-    left: 5%;
-  
+    top:35%;
+    left: 0%; 
+    
+    ul{
+       background: white;
+        padding-top: 1%;
+    }
     
     li{
         list-style: none;
+        padding: 0;
     }
  
 }
-#boton{
-    @include cuadroizquierda;
+#calculator{
+   // @include cuadroizquierda;
     position: absolute;
-    top: 28%;
-    left: 5%;  
+    top: 43%;
+    
 }
